@@ -1,6 +1,6 @@
 {
   "name": "fiado-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "fiado-components",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,18 @@
     "react-native-ui"
   ],
   "author": "fiado inc",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlosmora01/Fiado-Components/issues"
   },
-  "homepage": "https://github.com/carlosmora01/Fiado-Components#readme"
+  "homepage": "https://github.com/carlosmora01/Fiado-Components#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "metro-react-native-babel-preset": "^0.70.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
 }
