@@ -1,0 +1,22 @@
+{
+  "name": "fiado-components",
+  "version": "1.0.0",
+  "description": "fiado-components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmora01/Fiado-Components.git"
+  },
+  "keywords": [
+    "react-native-ui"
+  ],
+  "author": "fiado inc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosmora01/Fiado-Components/issues"
+  },
+  "homepage": "https://github.com/carlosmora01/Fiado-Components#readme"
+}
