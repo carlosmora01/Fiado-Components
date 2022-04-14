@@ -1,6 +1,6 @@
 {
-  "name": "fiado-components",
-  "version": "1.0.2",
+  "name": "componentes-fiado",
+  "version": "1.0.7",
   "description": "fiado-components",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,10 @@
     "metro-react-native-babel-preset": "^0.70.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "expo-font": "^10.0.5",
+    "libphonenumber-js": "^1.9.51",
+    "react-native-phone-number-input": "^2.1.0",
+    "styled-components": "^5.3.5"
   }
 }
