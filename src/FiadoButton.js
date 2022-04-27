@@ -6,12 +6,9 @@ export const FiadoButton = () => {
     /* Button color Red React Native */
     <View style={styles.container}>
         <Button title="Fiado" color="#FF0000" onPress={() => Alert.alert('Fiado')} />
-    </View>
-    
+    </View>  
   )
 }
-
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
