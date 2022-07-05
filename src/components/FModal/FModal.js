@@ -1,6 +1,5 @@
 import React from 'react';
 import { View,  StyleSheet,  Modal, Animated } from 'react-native';
-import { TouchableOpacity, Image } from 'react-native';
 
 export const FModal = ({visible, children}) => {
     const [showModal, setShowModal] = React.useState(visible);
@@ -29,16 +28,6 @@ export const FModal = ({visible, children}) => {
         <View style={styles.modalBackGround}>
           <Animated.View
             style={[styles.modalContainer, {transform: [{scale: scaleValue}]}]}>
-             <View style={{alignItems: 'center'}}>
-              <View style={styles.header}>
-                      <TouchableOpacity onPress={() => setShowModal(false)}>
-                          <Image
-                              source={require('./images/x.png')}
-                              style={{height: 30, width: 30}}
-                            />
-                      </TouchableOpacity>
-                </View>
-            </View>
 
             {children}
           </Animated.View>
@@ -62,10 +51,5 @@ export const FModal = ({visible, children}) => {
         borderRadius: 20,
         elevation: 20,
       },
-      header: {
-        width: '100%',
-        height: 40,
-        alignItems: 'flex-end',
-        justifyContent: 'center',
-      },
-  })
+     
+})

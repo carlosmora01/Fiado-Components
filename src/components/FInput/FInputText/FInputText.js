@@ -5,7 +5,7 @@ import { FText, InputContainer } from '../../../styles/globalTheme';
 import { Ionicons } from "@expo/vector-icons";
 import { useTogglePassword } from './hooks/useTogglePassword';
 
-export default function FInputText({ onPress = ()=>{}, keyBoard = 'default', label = '', editable = true,onChange = ()=>{}, error=false, errorMsg = 'Error message', placeholder,value, type='primary', icon ={}}) {
+export default function FInputText({ onPress = ()=>{}, autoCapitalize, keyBoard = 'default', label, editable = true,onChange = ()=>{}, error=false, errorMsg = 'Error message', placeholder,value, type='primary', icon ={}}) {
 
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
     useTogglePassword();
@@ -14,9 +14,9 @@ export default function FInputText({ onPress = ()=>{}, keyBoard = 'default', lab
     
     <View>   
           {   
-              label != true ? 
+              label ? 
               <View style={{padding:3}}>
-              <FText bold left>{label}</FText>
+                <FText bold left>{label}</FText>
               </View> : null
           }
         <InputContainer icon={icon}>
@@ -36,6 +36,7 @@ export default function FInputText({ onPress = ()=>{}, keyBoard = 'default', lab
                   textContentType="newPassword"
                   autoCorrect={false}
                   error={error}
+                  autoCapitalize={autoCapitalize}
               /> 
               <TouchableOpacity>
               <Ionicons
@@ -64,14 +65,16 @@ export default function FInputText({ onPress = ()=>{}, keyBoard = 'default', lab
                 {
                 
                   icon.name ? 
-               
+                  <TouchableOpacity>
                   <Ionicons
                     name={icon.name ? icon.name : 'calendar-sharp'}
                     size={icon.size ? icon.size : 28}
                     color={icon.color ? icon.color  : "black"}
                     style={{padding:3}}
                     onPress={icon?.action}
-                  /> : null
+                  /> 
+                  </TouchableOpacity>
+                  : null
                 }
                 </>
               

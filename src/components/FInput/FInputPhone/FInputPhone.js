@@ -4,7 +4,7 @@ import {  View} from 'react-native';
 import PhoneInput from 'react-native-phone-number-input'
 import { FText } from '../../../styles/globalTheme';
 
-export default function FInputPhone({ onChangeText, value, defaultValue, onChangeFormattedText,  label = '', defaultCountry="MX", error=false, errorMsg = 'Error message', placeholder }) {
+export default function FInputPhone({ onChangeText, value, defaultValue, onChangeFormattedText,  label = '', defaultCountry="MX", error=false, errorMsg = 'Error message', placeholder, disabled, countryPickerProps, textInputProps, codeTextStyle }) {
 
    return (
         <View>
@@ -25,12 +25,10 @@ export default function FInputPhone({ onChangeText, value, defaultValue, onChang
           textContainerStyle={{borderBottomRightRadius:13, borderTopRightRadius:13}}
           placeholder={placeholder}
           defaultCode={defaultCountry}
-          countryPickerProps={
-            {
-              translation:"spa",
-              countryCodes: ['US', 'MX', 'CO'], 
-            }
-          }
+          countryPickerProps={countryPickerProps}
+          textInputProps={textInputProps}
+          disabled={disabled}
+          codeTextStyle={codeTextStyle}
 
           />
 

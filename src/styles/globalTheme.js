@@ -80,8 +80,8 @@ ${({ error }) => {
 export const Container = styled.ScrollView`
   flex: 1;
   background-color: #fff;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
 `;
 
 export const Box = styled.View`

@@ -3,11 +3,13 @@ import { FModal } from './FModal'
 import { View, Image, StyleSheet } from 'react-native'
 import { FText } from '../../styles/globalTheme'
 import { FButton } from '../FButton/FButton'
+import { CloseModal } from './CloseModal'
 
-export const FModalDynamic = ({image, title, message, active, action}) => {
+export const FModalDynamic = ({image, title, message, active, action, close}) => {
    
   return (
     <FModal visible={active} >
+        <CloseModal action={close} />
         <View style={{alignItems: 'center'}}>
             <Image
             source={image}
@@ -19,7 +21,7 @@ export const FModalDynamic = ({image, title, message, active, action}) => {
         <FText center>{message}</FText> 
 
         <View style={style.buttonContainer}>
-          <FButton type='error' title="Ok" action={action} />  
+          <FButton title="Ok" action={action} />  
         </View>         
     </FModal>
   )

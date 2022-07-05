@@ -3,12 +3,14 @@ import { FModal } from './FModal'
 import { View, Image, Text, Button, StyleSheet } from 'react-native'
 import { FText } from '../../styles/globalTheme'
 import { FButton } from '../FButton/FButton'
+import { CloseModal } from './CloseModal'
 
 
-export const FModalQuestion = ({title, message, active, cancelAction, confirmAction}) => {
+export const FModalQuestion = ({title, message, active, cancelAction, confirmAction, close}) => {
    
   return (
     <FModal visible={active} >
+        <CloseModal action={close} />
         <View style={{alignItems: 'center'}}>
             <Image
             source={require('./images/question.png')}

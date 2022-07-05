@@ -1,6 +1,6 @@
 {
   "name": "componentes-fiado",
-  "version": "1.2.4",
+  "version": "1.2.16",
   "description": "fiado-components",
   "main": "index.js",
   "scripts": {
